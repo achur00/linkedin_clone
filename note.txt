@@ -1,0 +1,38 @@
+SETUP
+-----
+1.npx create-react-app my-app --template redux
+
+2.Go over to firebase
+ i. go to console add new poject
+ ii. go to console to cloud firebase and enable db
+   *incase firebase rules is saying things going to expire
+     then edit the code in rule section: and allow read and write
+     *note: not recommended for production but good for getting started*
+     !!!!do not foget
+  iii. then go to authentication and click start and enable email and    password sign in method
+  iv.then go to settings and an register app
+   v. install firebase tools cli
+       npm install firebase then npm install -g firbase-tools 
+   vi. go back to firebase setting in webapp and go to config
+       and copy the settings
+      ++++++++++++++++++++++++++++++++++++++++++++++++=
+firebaseConfig = {
+  apiKey: (this one's easy, it's in the 'General' section in your project settings page, aka the Gear icon button),
+  authDomain: "{project_id}.firebaseapp.com", (without brackets)
+  databaseURL: "https://{project_id}.firebaseio.com",
+  projectId: (again, found in 'General' section in Project Settings),
+  storageBucket: "{project_id}.appspot.com",
+  messagingSenderId: (found in 'Cloud Messaging' section in Project Settings)
++++++++++++++++++++++++++++++++++++++++++++++++++++++	
+
+-----
+
+{
+  "hosting": {
+    "site": "linkedin-ap",
+
+    "public": "public",
+    ...
+  }
+}
+----
